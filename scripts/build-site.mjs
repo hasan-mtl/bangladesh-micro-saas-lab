@@ -143,8 +143,8 @@ const homePage = () => layout({
     <div class="shell hero">
       <div class="hero-grid">
         <div>
-          <h1>Bangladesh SaaS ideas that solve real daily problems.</h1>
-          <p class="lead">No generic ecommerce. No WordPress setup business. This is a practical opportunity board for queues, stock, dues, bookings, fees, tables, rooms, and repeat cash pain.</p>
+          <h1>30 halal software ideas for Bangladesh reality.</h1>
+          <p class="lead">No generic template reselling. No online-store distraction. This is a practical opportunity board for queues, stock, dues, bookings, fees, tables, rooms, training, reports, and owner control.</p>
           <div class="hero-actions">
             <a class="button" href="#ideas">Explore the cards</a>
             <a class="button secondary" href="ideas/salon-serial-booking.html">Start with salon serial</a>
