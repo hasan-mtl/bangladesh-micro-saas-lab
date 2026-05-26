@@ -7,6 +7,8 @@ const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const dist = path.join(root, "dist");
 
 const money = (value) => `BDT ${new Intl.NumberFormat("en-BD").format(Math.round(value))}`;
+const orderedIdeas = [...ideas].sort((a, b) => b.score - a.score || a.title.localeCompare(b.title));
+const ideaRank = (idea) => orderedIdeas.findIndex((item) => item.id === idea.id) + 1;
 
 const escapeHtml = (value) => String(value)
   .replace(/&/g, "&amp;")
@@ -117,7 +119,7 @@ const fullCalculator = (idea) => `
 const ideaCard = (idea) => `
   <article class="idea-card reveal">
     <div class="idea-top">
-      <div class="rank">${String(idea.rank).padStart(2, "0")}</div>
+      <div class="rank">${String(ideaRank(idea)).padStart(2, "0")}</div>
       <div>
         <h3>${escapeHtml(idea.title)}</h3>
         <p class="tagline">${escapeHtml(idea.thesis)}</p>
@@ -156,7 +158,7 @@ const homePage = () => layout({
             <span>${escapeHtml(site.updated)}</span>
           </div>
           <div class="signal-list">
-            ${ideas.slice(0, 4).map((idea) => `
+            ${orderedIdeas.slice(0, 4).map((idea) => `
               <a class="signal-row" href="ideas/${idea.slug}.html">
                 <b>${idea.score.toFixed(1)}</b>
                 <span><strong>${escapeHtml(idea.shortTitle)}</strong><p>${escapeHtml(idea.corePain)}</p></span>
@@ -197,7 +199,7 @@ const homePage = () => layout({
           <p>The default calculator uses 1,000 businesses because it makes the model clear. Change setup and monthly price to test your own package.</p>
         </div>
         <div class="idea-grid">
-          ${ideas.map(ideaCard).join("")}
+          ${orderedIdeas.map(ideaCard).join("")}
         </div>
       </div>
     </section>
@@ -219,8 +221,8 @@ const homePage = () => layout({
 });
 
 const detailPage = (idea, index) => {
-  const next = ideas[(index + 1) % ideas.length];
-  const previous = ideas[(index - 1 + ideas.length) % ideas.length];
+  const next = orderedIdeas[(index + 1) % orderedIdeas.length];
+  const previous = orderedIdeas[(index - 1 + orderedIdeas.length) % orderedIdeas.length];
   return layout({
     title: `${idea.title} - ${site.title}`,
     description: idea.thesis,
@@ -230,7 +232,7 @@ const detailPage = (idea, index) => {
         <a class="breadcrumb" href="../index.html#ideas">Back to all ideas</a>
         <div class="detail-grid">
           <div>
-            <p class="label">Rank ${String(idea.rank).padStart(2, "0")} - ${escapeHtml(idea.category)}</p>
+            <p class="label">Rank ${String(ideaRank(idea)).padStart(2, "0")} - ${escapeHtml(idea.category)}</p>
             <h1 class="detail-title">${escapeHtml(idea.title)}</h1>
             <p class="lead">${escapeHtml(idea.thesis)}</p>
             <div class="button-row">
@@ -335,7 +337,7 @@ await copyFile(path.join(root, "src", "styles.css"), path.join(dist, "assets", "
 await copyFile(path.join(root, "src", "site.js"), path.join(dist, "assets", "site.js"));
 await writeFile(path.join(dist, "index.html"), homePage(), "utf8");
 
-await Promise.all(ideas.map((idea, index) => (
+await Promise.all(orderedIdeas.map((idea, index) => (
   writeFile(path.join(dist, "ideas", `${idea.slug}.html`), detailPage(idea, index), "utf8")
 )));
 

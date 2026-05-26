@@ -826,57 +826,57 @@ export const ideas = [
     ]
   },
   {
-    id: "apartment",
+    id: "bariwala-rent",
     rank: 15,
-    slug: "apartment-maintenance-collection",
-    title: "Apartment Maintenance Fee Collection",
-    shortTitle: "Apartment Fees",
+    slug: "bariwala-market-shop-rent-manager",
+    title: "Bariwala and Market Shop Rent Manager",
+    shortTitle: "Bariwala Rent",
     category: "Property",
-    score: 7.5,
-    setupFee: 10000,
-    monthlyFee: 600,
-    supportCost: 120,
-    defaultCustomers: 500,
-    serviceableTarget: "Target small apartment buildings, flat-owner associations, market committees, and housing societies.",
-    thesis: "Building managers collect monthly maintenance, guard salary, utility share, generator cost, and repair fund manually.",
-    corePain: "Residents delay payment, treasurer records are unclear, and monthly expenses are not transparent.",
+    score: 9.1,
+    setupFee: 8000,
+    monthlyFee: 500,
+    supportCost: 100,
+    defaultCustomers: 1000,
+    serviceableTarget: "Target bariwala, flat owners, small building owners, market owners, bazar committees, and shop landlords who collect rent every month from tenants.",
+    thesis: "Bariwala and market owners need one place for monthly rent, shop rent, electricity, service charge, advance, due, notice, and receipt.",
+    corePain: "Rent is collected by cash, bKash, notebook, or memory. Tenants delay payment, receipts are unclear, electricity/service charges are disputed, and the owner cannot see monthly due quickly.",
     mvp: [
-      "Flat list",
-      "Monthly maintenance bill",
+      "Tenant and shop list",
+      "Flat/room/shop rent setup",
+      "Monthly rent bill",
+      "Electricity and service charge",
+      "Advance/security deposit record",
       "Payment receipt",
-      "Expense log",
-      "Due list",
-      "Resident notice",
-      "Monthly balance report"
+      "Due reminder and monthly owner report"
     ],
-    pricingLogic: "BDT 600/month can work because the building pays as a group, not one individual.",
-    saleLine: "Every flat sees due, receipt, expense, and monthly balance.",
+    pricingLogic: "BDT 500/month is practical for small landlords. For market owners with many shops, charge BDT 1,000-2,000/month or per 50 tenants because rent collection is high-value.",
+    saleLine: "The bariwala sees who paid, who is due, which shop owes electricity, and can send a clean receipt.",
     notBuild: [
-      "Do not build property marketplace.",
-      "Do not handle money custody first.",
-      "Do not add legal dispute tools."
+      "Do not build a house-rental marketplace first.",
+      "Do not custody rent money first.",
+      "Do not add legal eviction tools."
     ],
     validation: [
-      "Urban apartments have recurring monthly collection.",
-      "Transparency is a strong trust issue.",
-      "Group payment makes SaaS easier.",
-      "Notices can reduce phone calls."
+      "Retail and repair are the largest economic-unit block, so market/shop rent is a large recurring workflow.",
+      "Rent receipt and landlord-tenant disputes are known Bangladesh pain points.",
+      "Rent repeats monthly, which fits subscription software.",
+      "Market owners and bariwala can pay more than a single tenant because one account manages many units."
     ],
     launchPlan: [
-      "Pilot with 5 buildings.",
-      "Set up flat list.",
-      "Use monthly bill and due list.",
-      "Add resident portal later."
+      "Pilot with 5 bariwala or market owners.",
+      "Enter tenant/shop list and monthly rent amount.",
+      "Generate first month's bills and receipts.",
+      "Add tenant SMS/WhatsApp due reminder after owner trusts the record."
     ],
     risks: [
-      "Committee politics.",
-      "Cash payment handling.",
-      "Custom expense categories."
+      "Owners may not want tenants to see full records.",
+      "Cash payment creates proof disputes.",
+      "Each market has custom charges."
     ],
     mitigations: [
-      "Treasurer-only controls.",
-      "Receipt without custody.",
-      "Simple expense templates."
+      "Owner-only dashboard with optional tenant receipt page.",
+      "Receipt number and payment note without holding money.",
+      "Configurable charge types for electricity, service, guard, generator, and market fee."
     ]
   },
   {
