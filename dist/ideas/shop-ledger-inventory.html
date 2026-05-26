@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Ledger, Inventory, and Daily Profit - Bangladesh Micro-SaaS Lab</title>
+  <meta name="description" content="The shop owner wants to know what was bought, what was sold, who owes money, what stock is low, and what profit came today.">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="../index.html" aria-label="Bangladesh Micro-SaaS Lab home">
+        <span class="mark" aria-hidden="true"></span>
+        <span>Bangladesh Micro-SaaS Lab</span>
+      </a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="../index.html#ideas">Ideas</a>
+        <a href="../index.html#market">Market data</a>
+        <a href="../index.html#removed">Removed ideas</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+      <div class="shell detail-hero">
+        <a class="breadcrumb" href="../index.html#ideas">Back to all ideas</a>
+        <div class="detail-grid">
+          <div>
+            <p class="label">Rank 02 - Retail</p>
+            <h1 class="detail-title">Shop Ledger, Inventory, and Daily Profit</h1>
+            <p class="lead">The shop owner wants to know what was bought, what was sold, who owes money, what stock is low, and what profit came today.</p>
+            <div class="button-row">
+              <a class="button" href="#calculator">Calculate revenue</a>
+              <a class="button secondary" href="../index.html">Open overview</a>
+            </div>
+          </div>
+          <aside class="detail-card reveal">
+            <h3>Suggested package</h3>
+            <div class="price-stack" style="margin-top: 16px;">
+              <div class="price-box"><b>BDT 5,000</b><span>Installation/setup fee</span></div>
+              <div class="price-box"><b>BDT 200</b><span>Recommended monthly charge</span></div>
+            </div>
+            <p style="margin-top: 16px;">BDT 200/month can work only if the local starter tier is simple. Cloud backup and restore should be BDT 300-500/month.</p>
+          </aside>
+        </div>
+      </div>
+
+      <section>
+        <div class="shell">
+          <div class="number-strip">
+            <div class="number-card reveal"><b>9.2</b><span>Practical score based on daily pain, willingness to pay, support load, and expansion potential.</span></div>
+            <div class="number-card reveal"><b>BDT 5,000</b><span>Default setup used in calculator.</span></div>
+            <div class="number-card reveal"><b>BDT 200</b><span>Suggested monthly price after support-cost thinking.</span></div>
+            <div class="number-card reveal"><b>BDT 7,400,000</b><span>Gross year-one revenue at 1,000 businesses.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell detail-section-grid">
+          <article class="text-panel reveal">
+            <h3>Why this can work</h3>
+            <p>Retail and repair are the largest slice of Bangladesh economic units. Even 1,000 customers is a tiny fraction of the serviceable market.</p>
+            <p style="margin-top: 14px;">Notebook records get lost, buying price is forgotten, customer dues are unclear, and the owner does not know if the day was profitable.</p>
+            <p style="margin-top: 14px;"><strong>At night you know the truth: total sale, due, stock, and profit.</strong></p>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Validation signals</h3>
+            <ul class="divider-list"><li>Bangladesh has more than 7.8 million CMSMEs.</li><li>Retail and repair are above 40 percent of economic units.</li><li>Digital ledger products already validate the habit.</li><li>Phone-loss fear makes cloud backup easy to sell.</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell two-col">
+          <article class="list-panel reveal">
+            <h3>MVP modules</h3>
+            <ul class="divider-list"><li>Product list with buying price, selling price, quantity, unit, low stock</li><li>Purchase entry</li><li>Sale entry</li><li>Customer due and supplier due</li><li>Daily close</li><li>Monthly report</li><li>Local backup and cloud backup upgrade</li></ul>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Do not build first</h3>
+            <ul class="divider-list"><li>Do not call it accounting software.</li><li>Do not add complex ERP modules first.</li><li>Do not promise unlimited support at BDT 100/month.</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculator">
+        <div class="shell">
+          <div class="section-head reveal">
+            <div>
+              <p class="label">Money model</p>
+              <h2>Change the inputs and see the business case instantly.</h2>
+            </div>
+            <p>Use support cost as a reality check. Low monthly pricing looks attractive until support eats the margin.</p>
+          </div>
+          
+  <div class="calculator" data-calculator>
+    <h3>Calculator for Shop Ledger</h3>
+    <div class="calc-inputs">
+      <div class="field">
+        <label>Businesses sold</label>
+        <input data-calc="customers" type="number" min="1" value="1000">
+      </div>
+      <div class="field">
+        <label>Installation fee</label>
+        <input data-calc="setup" type="number" min="0" value="5000">
+      </div>
+      <div class="field">
+        <label>Monthly charge</label>
+        <input data-calc="monthly" type="number" min="0" value="200">
+      </div>
+      <div class="field">
+        <label>Support cost/user</label>
+        <input data-calc="support" type="number" min="0" value="60">
+      </div>
+      <div class="field">
+        <label>Months</label>
+        <input data-calc="months" type="number" min="1" value="12">
+      </div>
+    </div>
+    <div class="calc-results">
+      <div class="result-box"><span>Setup revenue</span><b data-result="setupRevenue"></b></div>
+      <div class="result-box"><span>Monthly revenue</span><b data-result="mrr"></b></div>
+      <div class="result-box accent"><span>First month</span><b data-result="firstMonth"></b></div>
+      <div class="result-box"><span>Period subscription</span><b data-result="periodSubscription"></b></div>
+      <div class="result-box accent"><span>Period gross total</span><b data-result="periodTotal"></b></div>
+      <div class="result-box"><span>Support budget/mo</span><b data-result="supportBudget"></b></div>
+      <div class="result-box accent"><span>Net monthly after support</span><b data-result="netMonthly"></b></div>
+    </div>
+  </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell two-col">
+          <article class="list-panel reveal">
+            <h3>First 30-day launch plan</h3>
+            <ul class="divider-list"><li>Choose one bazar and onboard 10 shops manually.</li><li>Import opening stock for them.</li><li>Make daily close the first habit.</li><li>Charge cloud only after owner understands data-loss risk.</li></ul>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Risks and fixes</h3>
+            <div class="divider-list">
+              <div><strong>Risks</strong><ul class="divider-list"><li>Low monthly price can be eaten by support calls.</li><li>Shop staff may enter wrong buying price.</li><li>Churn after setup is possible.</li></ul></div>
+              <div><strong>Mitigations</strong><ul class="divider-list"><li>Offer annual prepaid.</li><li>Use product templates and CSV import.</li><li>Add backup reminders and restore proof.</li></ul></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell">
+          <div class="card-actions">
+            <a class="plain-link" href="salon-serial-booking.html">Previous: Salon Serial</a>
+            <a class="plain-link" href="restaurant-table-order.html">Next: Restaurant Table</a>
+          </div>
+        </div>
+      </section></main>
+  <footer class="page-footer">
+    <div class="shell">
+      <p>Bangladesh Micro-SaaS Lab. Updated May 26, 2026. Built for practical Bangladesh SaaS possibility planning.</p>
+    </div>
+  </footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

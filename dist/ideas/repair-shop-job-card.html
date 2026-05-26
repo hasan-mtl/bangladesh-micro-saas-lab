@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repair Shop Job Card and Warranty - Bangladesh Micro-SaaS Lab</title>
+  <meta name="description" content="Repair shops need job cards, device photos, part usage, warranty dates, pickup reminders, and technician commissions.">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="../index.html" aria-label="Bangladesh Micro-SaaS Lab home">
+        <span class="mark" aria-hidden="true"></span>
+        <span>Bangladesh Micro-SaaS Lab</span>
+      </a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="../index.html#ideas">Ideas</a>
+        <a href="../index.html#market">Market data</a>
+        <a href="../index.html#removed">Removed ideas</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+      <div class="shell detail-hero">
+        <a class="breadcrumb" href="../index.html#ideas">Back to all ideas</a>
+        <div class="detail-grid">
+          <div>
+            <p class="label">Rank 09 - Service</p>
+            <h1 class="detail-title">Repair Shop Job Card and Warranty</h1>
+            <p class="lead">Repair shops need job cards, device photos, part usage, warranty dates, pickup reminders, and technician commissions.</p>
+            <div class="button-row">
+              <a class="button" href="#calculator">Calculate revenue</a>
+              <a class="button secondary" href="../index.html">Open overview</a>
+            </div>
+          </div>
+          <aside class="detail-card reveal">
+            <h3>Suggested package</h3>
+            <div class="price-stack" style="margin-top: 16px;">
+              <div class="price-box"><b>BDT 6,000</b><span>Installation/setup fee</span></div>
+              <div class="price-box"><b>BDT 300</b><span>Recommended monthly charge</span></div>
+            </div>
+            <p style="margin-top: 16px;">BDT 300/month is realistic if cloud photo backup is included in a higher tier.</p>
+          </aside>
+        </div>
+      </div>
+
+      <section>
+        <div class="shell">
+          <div class="number-strip">
+            <div class="number-card reveal"><b>7.3</b><span>Practical score based on daily pain, willingness to pay, support load, and expansion potential.</span></div>
+            <div class="number-card reveal"><b>BDT 6,000</b><span>Default setup used in calculator.</span></div>
+            <div class="number-card reveal"><b>BDT 300</b><span>Suggested monthly price after support-cost thinking.</span></div>
+            <div class="number-card reveal"><b>BDT 9,600,000</b><span>Gross year-one revenue at 1,000 businesses.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell detail-section-grid">
+          <article class="text-panel reveal">
+            <h3>Why this can work</h3>
+            <p>Target mobile repair, electronics repair, computer service, motorcycle workshops, and AC repair desks in dense market areas.</p>
+            <p style="margin-top: 14px;">Customer device details are forgotten, warranty arguments happen, parts usage is unclear, and technicians are paid without accurate job history.</p>
+            <p style="margin-top: 14px;"><strong>Every repair has proof: photo, issue, parts, warranty, due, and technician.</strong></p>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Validation signals</h3>
+            <ul class="divider-list"><li>Repair shops cluster in every town.</li><li>Warranty disputes create real pain.</li><li>Photo evidence is easy to understand.</li><li>Technician commission is a strong owner hook.</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell two-col">
+          <article class="list-panel reveal">
+            <h3>MVP modules</h3>
+            <ul class="divider-list"><li>Job card</li><li>Device photo</li><li>Problem note</li><li>Parts used</li><li>Warranty date</li><li>Pickup reminder</li><li>Technician commission</li></ul>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Do not build first</h3>
+            <ul class="divider-list"><li>Do not build marketplace for repair leads.</li><li>Do not add inventory complexity first.</li><li>Do not require long forms.</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculator">
+        <div class="shell">
+          <div class="section-head reveal">
+            <div>
+              <p class="label">Money model</p>
+              <h2>Change the inputs and see the business case instantly.</h2>
+            </div>
+            <p>Use support cost as a reality check. Low monthly pricing looks attractive until support eats the margin.</p>
+          </div>
+          
+  <div class="calculator" data-calculator>
+    <h3>Calculator for Repair Job Card</h3>
+    <div class="calc-inputs">
+      <div class="field">
+        <label>Businesses sold</label>
+        <input data-calc="customers" type="number" min="1" value="1000">
+      </div>
+      <div class="field">
+        <label>Installation fee</label>
+        <input data-calc="setup" type="number" min="0" value="6000">
+      </div>
+      <div class="field">
+        <label>Monthly charge</label>
+        <input data-calc="monthly" type="number" min="0" value="300">
+      </div>
+      <div class="field">
+        <label>Support cost/user</label>
+        <input data-calc="support" type="number" min="0" value="80">
+      </div>
+      <div class="field">
+        <label>Months</label>
+        <input data-calc="months" type="number" min="1" value="12">
+      </div>
+    </div>
+    <div class="calc-results">
+      <div class="result-box"><span>Setup revenue</span><b data-result="setupRevenue"></b></div>
+      <div class="result-box"><span>Monthly revenue</span><b data-result="mrr"></b></div>
+      <div class="result-box accent"><span>First month</span><b data-result="firstMonth"></b></div>
+      <div class="result-box"><span>Period subscription</span><b data-result="periodSubscription"></b></div>
+      <div class="result-box accent"><span>Period gross total</span><b data-result="periodTotal"></b></div>
+      <div class="result-box"><span>Support budget/mo</span><b data-result="supportBudget"></b></div>
+      <div class="result-box accent"><span>Net monthly after support</span><b data-result="netMonthly"></b></div>
+    </div>
+  </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell two-col">
+          <article class="list-panel reveal">
+            <h3>First 30-day launch plan</h3>
+            <ul class="divider-list"><li>Start with mobile repair markets.</li><li>Use one-minute job card entry.</li><li>Add printed receipt later.</li><li>Offer cloud photo backup as pro.</li></ul>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Risks and fixes</h3>
+            <div class="divider-list">
+              <div><strong>Risks</strong><ul class="divider-list"><li>Technicians avoid data entry.</li><li>Photos use storage.</li><li>Owners may demand parts inventory.</li></ul></div>
+              <div><strong>Mitigations</strong><ul class="divider-list"><li>Make camera the first input.</li><li>Compress photos.</li><li>Keep parts list simple in MVP.</li></ul></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell">
+          <div class="card-actions">
+            <a class="plain-link" href="tailor-boutique-order-manager.html">Previous: Tailor Orders</a>
+            <a class="plain-link" href="distributor-due-collection.html">Next: Distributor Dues</a>
+          </div>
+        </div>
+      </section></main>
+  <footer class="page-footer">
+    <div class="shell">
+      <p>Bangladesh Micro-SaaS Lab. Updated May 26, 2026. Built for practical Bangladesh SaaS possibility planning.</p>
+    </div>
+  </footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>

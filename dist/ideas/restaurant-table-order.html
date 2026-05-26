@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant Table QR Order and Kitchen Display - Bangladesh Micro-SaaS Lab</title>
+  <meta name="description" content="A restaurant loses time when staff repeat the menu, table status is unclear, and kitchen orders are shouted or written badly.">
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  
+  <header class="topbar">
+    <div class="shell nav">
+      <a class="brand" href="../index.html" aria-label="Bangladesh Micro-SaaS Lab home">
+        <span class="mark" aria-hidden="true"></span>
+        <span>Bangladesh Micro-SaaS Lab</span>
+      </a>
+      <nav class="navlinks" aria-label="Primary navigation">
+        <a href="../index.html#ideas">Ideas</a>
+        <a href="../index.html#market">Market data</a>
+        <a href="../index.html#removed">Removed ideas</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+      <div class="shell detail-hero">
+        <a class="breadcrumb" href="../index.html#ideas">Back to all ideas</a>
+        <div class="detail-grid">
+          <div>
+            <p class="label">Rank 03 - Food</p>
+            <h1 class="detail-title">Restaurant Table QR Order and Kitchen Display</h1>
+            <p class="lead">A restaurant loses time when staff repeat the menu, table status is unclear, and kitchen orders are shouted or written badly.</p>
+            <div class="button-row">
+              <a class="button" href="#calculator">Calculate revenue</a>
+              <a class="button secondary" href="../index.html">Open overview</a>
+            </div>
+          </div>
+          <aside class="detail-card reveal">
+            <h3>Suggested package</h3>
+            <div class="price-stack" style="margin-top: 16px;">
+              <div class="price-box"><b>BDT 12,000</b><span>Installation/setup fee</span></div>
+              <div class="price-box"><b>BDT 700</b><span>Recommended monthly charge</span></div>
+            </div>
+            <p style="margin-top: 16px;">BDT 700/month is reasonable because restaurants can pay more when the system touches table turnover, menu control, and kitchen speed.</p>
+          </aside>
+        </div>
+      </div>
+
+      <section>
+        <div class="shell">
+          <div class="number-strip">
+            <div class="number-card reveal"><b>8.8</b><span>Practical score based on daily pain, willingness to pay, support load, and expansion potential.</span></div>
+            <div class="number-card reveal"><b>BDT 12,000</b><span>Default setup used in calculator.</span></div>
+            <div class="number-card reveal"><b>BDT 700</b><span>Suggested monthly price after support-cost thinking.</span></div>
+            <div class="number-card reveal"><b>BDT 20,400,000</b><span>Gross year-one revenue at 1,000 businesses.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell detail-section-grid">
+          <article class="text-panel reveal">
+            <h3>Why this can work</h3>
+            <p>Food-service establishments crossed 436,000 in the 2021 BBS survey. A 1,000-restaurant target is less than 0.25 percent of that base.</p>
+            <p style="margin-top: 14px;">Customers do not know available items. Staff forget table order details. Owners cannot see which table is active. Kitchen receives messy notes.</p>
+            <p style="margin-top: 14px;"><strong>Customers scan, see available items, order faster, and the kitchen gets a clean queue.</strong></p>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Validation signals</h3>
+            <ul class="divider-list"><li>Food-service count is large and growing.</li><li>QR menu behavior is familiar after mobile payments and delivery apps.</li><li>Rush-hour workflow has obvious pain.</li><li>Hardware and printer support can become a pro tier.</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell two-col">
+          <article class="list-panel reveal">
+            <h3>MVP modules</h3>
+            <ul class="divider-list"><li>QR menu per table</li><li>Live table status</li><li>30-60 second table hold</li><li>Waiter mode</li><li>Kitchen order display</li><li>Item available/unavailable toggle</li><li>Bill print/share and daily cash close</li></ul>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Do not build first</h3>
+            <ul class="divider-list"><li>Do not build food delivery marketplace.</li><li>Do not build complex inventory first.</li><li>Do not require customers to install an app.</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="calculator">
+        <div class="shell">
+          <div class="section-head reveal">
+            <div>
+              <p class="label">Money model</p>
+              <h2>Change the inputs and see the business case instantly.</h2>
+            </div>
+            <p>Use support cost as a reality check. Low monthly pricing looks attractive until support eats the margin.</p>
+          </div>
+          
+  <div class="calculator" data-calculator>
+    <h3>Calculator for Restaurant Table</h3>
+    <div class="calc-inputs">
+      <div class="field">
+        <label>Businesses sold</label>
+        <input data-calc="customers" type="number" min="1" value="1000">
+      </div>
+      <div class="field">
+        <label>Installation fee</label>
+        <input data-calc="setup" type="number" min="0" value="12000">
+      </div>
+      <div class="field">
+        <label>Monthly charge</label>
+        <input data-calc="monthly" type="number" min="0" value="700">
+      </div>
+      <div class="field">
+        <label>Support cost/user</label>
+        <input data-calc="support" type="number" min="0" value="180">
+      </div>
+      <div class="field">
+        <label>Months</label>
+        <input data-calc="months" type="number" min="1" value="12">
+      </div>
+    </div>
+    <div class="calc-results">
+      <div class="result-box"><span>Setup revenue</span><b data-result="setupRevenue"></b></div>
+      <div class="result-box"><span>Monthly revenue</span><b data-result="mrr"></b></div>
+      <div class="result-box accent"><span>First month</span><b data-result="firstMonth"></b></div>
+      <div class="result-box"><span>Period subscription</span><b data-result="periodSubscription"></b></div>
+      <div class="result-box accent"><span>Period gross total</span><b data-result="periodTotal"></b></div>
+      <div class="result-box"><span>Support budget/mo</span><b data-result="supportBudget"></b></div>
+      <div class="result-box accent"><span>Net monthly after support</span><b data-result="netMonthly"></b></div>
+    </div>
+  </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell two-col">
+          <article class="list-panel reveal">
+            <h3>First 30-day launch plan</h3>
+            <ul class="divider-list"><li>Pilot with 5 small restaurants that already have table service.</li><li>Use laminated table QR cards.</li><li>Test rush-hour kitchen display.</li><li>Charge setup after one week if staff keeps using it.</li></ul>
+          </article>
+          <article class="list-panel reveal">
+            <h3>Risks and fixes</h3>
+            <div class="divider-list">
+              <div><strong>Risks</strong><ul class="divider-list"><li>If the UI is slow, staff will abandon it.</li><li>Printer and network issues create support load.</li><li>Restaurants may ask for custom menu design.</li></ul></div>
+              <div><strong>Mitigations</strong><ul class="divider-list"><li>Keep waiter mode as fast as paper.</li><li>Sell hardware setup separately.</li><li>Use fixed menu templates.</li></ul></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section>
+        <div class="shell">
+          <div class="card-actions">
+            <a class="plain-link" href="shop-ledger-inventory.html">Previous: Shop Ledger</a>
+            <a class="plain-link" href="pharmacy-stock-expiry.html">Next: Pharmacy Stock</a>
+          </div>
+        </div>
+      </section></main>
+  <footer class="page-footer">
+    <div class="shell">
+      <p>Bangladesh Micro-SaaS Lab. Updated May 26, 2026. Built for practical Bangladesh SaaS possibility planning.</p>
+    </div>
+  </footer>
+  <script src="../assets/site.js"></script>
+</body>
+</html>
